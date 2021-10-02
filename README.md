@@ -16,14 +16,14 @@ The simple contribution instructions are:
 
 All the best for your Hacktoberfest Journey!
 
-## How to start Contributing and pull request [Longer Way For Nerds] (Scrool Down For Shorter Version)
+## How to start Contributing and pull request
 
 **1.**  Fork [this](https://github.com/Vanshikapandey30/HacktoberFest2021.git) repository.
 
 **2.**  Clone your forked copy of the project.
 
 ```
-git clone --depth 1 https://github.com/<your_name>/hacktoberfest-2021
+git clone --depth 1 https://github.com/<your_name>//HactoberFest2021
 ```
 
 **3.** Navigate to the project directory :file_folder: .
@@ -35,7 +35,7 @@ cd hacktoberfest-2021
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/hctnm2/hacktoberfest-2021
+git remote add upstream https://github.com/hctnm2//HactoberFest2021
 ```
 
 **5.** Check the remotes for this repository.
