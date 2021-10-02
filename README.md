@@ -35,7 +35,7 @@ cd HactoberFest2021
 **4.** Add a reference(remote) to the original repository.
 
 ```
-git remote add upstream https://github.com/hctnm2/HactoberFest2021
+git remote add upstream https://github.com/Vanshikapandey30/HacktoberFest2021.git
 ```
 
 **5.** Check the remotes for this repository.
