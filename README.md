@@ -4,15 +4,17 @@ What I can contribute?
 A list of awesome beginner-friendly animations.
 Creative & simple landing pages.
 DSA codes in any language.
-
+Create a seprate directory for each contribution.
 ## Contribution Instructions
 The simple contribution instructions are:
 
-Star ⭐ & Fork 🍴 this Repository. Subscribe to my YouTube Channel.
-Create a directory under your GitHub Username.
-Inside the directory, please have the list of static files.
-Create a Pull Request with the PR Template given.
+- Star ⭐ & Fork 🍴 this Repository.
+- Create a directory under your GitHub Username.
+- Inside the directory, please have the list of static files.
+- Create a Pull Request with the PR Template given.
+
 All the best for your Hacktoberfest Journey!
+
 
 ## Contribute
 Contributions are welcome! 
