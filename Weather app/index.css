@@ -116,5 +116,5 @@ body
 {
   .heading {font-size: 60px;}
   .col {width: 25%;}
-  .container-1 {display :none;}
+/*   .container-1 {display :none;} This was not creating any issue in the responsiveness*/
 }
