@@ -1,7 +1,7 @@
 // api key - c569897da01aa711e1df53610eb8f9cf
 
 //var url = 'https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=c569897da01aa711e1df53610eb8f9cf&units=metric';
-var sub = document.getElementById("search-btn");
+var sub = document.getElementsByClassName("btn-outline-info")[0];
 sub.addEventListener("click",getValues);
 
 async function getValues()
@@ -17,9 +17,9 @@ async function getValues()
   var t = m.temp;
   var h = m.humidity;
   var p = m.pressure;
-  document.getElementById("temp").innerHTML = t;
-  document.getElementById("hum").innerHTML = h;
-  document.getElementById("pres").innerHTML = p;
+  document.getElementById("temp").innerHTML = t+" °C";
+  document.getElementById("hum").innerHTML = h+" %";
+  document.getElementById("pres").innerHTML = p+" mPA";
 
   const w = json.weather;
   var d = w[0].description;
