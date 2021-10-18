@@ -1,2 +1,0 @@
-D9EFFD - initial wave color (light)
-407BFF - primary color (dark)
