@@ -1,0 +1,35 @@
+body{
+  background-color: #39e6e3;
+}
+
+.container{
+  text-align: center;
+}
+
+table{
+  margin: auto;
+}
+
+input{
+  font-size: 38px;
+  border: 3px solid black;
+}
+
+button{
+  font-size: 40px;
+  width: 100px;
+  height: 57px;
+  color: #309c5f;
+  background-color: black;
+}
+
+button:hover{
+  cursor: pointer;
+  background-color: white;
+}
+
+footer{
+  margin-top: 4%;
+  margin-left: 41%;
+  font-size: 25px;
+}
