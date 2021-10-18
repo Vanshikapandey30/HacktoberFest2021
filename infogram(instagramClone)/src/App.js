@@ -51,9 +51,9 @@ function App() {
     // console.log(data)
   }
   return (
-    <div style={{ display: 'grid', placeItems: 'center' }}>
-      <div className="app">
-        <Header />
+    <div className="app">
+      <Header />
+      <div style={{ display: 'grid', placeItems: 'center' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start' }}>
           <div className="appHome">
             <Home
@@ -69,13 +69,13 @@ function App() {
           handleClose={handleUploader}
           handleUpload={handleUpload}
         />
-        <Footer
-          username="SrinivasTheDeveloper"
-          logo={'image.jpg'}
-          isUploaderOpen={isUploaderOpen}
-          handleUploader={handleUploader}
-        />
       </div>
+      <Footer
+        username="SrinivasTheDeveloper"
+        logo={'image.jpg'}
+        isUploaderOpen={isUploaderOpen}
+        handleUploader={handleUploader}
+      />
     </div>
   )
 }

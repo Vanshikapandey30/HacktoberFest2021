@@ -16,68 +16,76 @@ export default function Footer({ username, logo, handleUploader }) {
   const [screenName, setScreenName] = useState('home')
   return (
     <div style={styles.container}>
-      {screenName === 'home' ? (
-        <HomeIcon
-          style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#f09' } }}
-        />
-      ) : (
-        <HomeOutlinedIcon
-          style={styles.icons}
+      <div style={styles.inner}>
+        {screenName === 'home' ? (
+          <HomeIcon
+            style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#f09' } }}
+          />
+        ) : (
+          <HomeOutlinedIcon
+            style={styles.icons}
+            className="FooterIcons"
+            onClick={() => setScreenName('home')}
+          />
+        )}
+        {screenName === 'search' ? (
+          <AddReactionIcon
+            style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#fa0' } }}
+          />
+        ) : (
+          <AddReactionOutlinedIcon
+            style={styles.icons}
+            className="FooterIcons"
+            onClick={() => setScreenName('search')}
+          />
+        )}
+        {screenName === 'add' ? (
+          <AddBoxIcon
+            onClick={() => {
+              handleUploader(['uploader', true])
+            }}
+            style={{
+              ...styles.icons,
+              ...{ fontSize: '33px', fill: '#0095f6' },
+            }}
+          />
+        ) : (
+          <AddBoxOutlinedIcon
+            style={styles.icons}
+            className="FooterIcons"
+            onClick={() => {
+              setScreenName('add')
+              handleUploader(['uploader', true])
+            }}
+          />
+        )}
+        {screenName === 'fav' ? (
+          <FavoriteIcon
+            style={{
+              ...styles.icons,
+              ...{ fontSize: '33px', fill: '#ed4956' },
+            }}
+          />
+        ) : (
+          <FavoriteBorderIcon
+            style={styles.icons}
+            className="FooterIcons"
+            onClick={() => setScreenName('fav')}
+          />
+        )}
+        <Avatar
           className="FooterIcons"
-          onClick={() => setScreenName('home')}
-        />
-      )}
-      {screenName === 'search' ? (
-        <AddReactionIcon
-          style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#fa0' } }}
-        />
-      ) : (
-        <AddReactionOutlinedIcon
-          style={styles.icons}
-          className="FooterIcons"
-          onClick={() => setScreenName('search')}
-        />
-      )}
-      {screenName === 'add' ? (
-        <AddBoxIcon
-          onClick={() => {
-            handleUploader(['uploader', true])
+          alt={username}
+          src={logo}
+          style={{
+            maxWidth: '30px',
+            maxHeight: '30px',
+            objectFit: 'contain',
+            border: screenName === 'user' ? '3px solid #f3f' : 'none',
           }}
-          style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#0095f6' } }}
+          onClick={() => setScreenName('user')}
         />
-      ) : (
-        <AddBoxOutlinedIcon
-          style={styles.icons}
-          className="FooterIcons"
-          onClick={() => {
-            setScreenName('add')
-            handleUploader(['uploader', true])
-          }}
-        />
-      )}
-      {screenName === 'fav' ? (
-        <FavoriteIcon
-          style={{ ...styles.icons, ...{ fontSize: '33px', fill: '#ed4956' } }}
-        />
-      ) : (
-        <FavoriteBorderIcon
-          style={styles.icons}
-          className="FooterIcons"
-          onClick={() => setScreenName('fav')}
-        />
-      )}
-      <Avatar
-        className="FooterIcons"
-        alt={username}
-        src={logo}
-        style={{
-          maxWidth: '30px',
-          maxHeight: '30px',
-          objectFit: 'contain',
-          border: screenName === 'user' ? '3px solid #f3f' : 'none',
-        }}
-        onClick={() => setScreenName('user')}
-      />
+      </div>
     </div>
   )
 }
@@ -87,11 +95,17 @@ const styles = {
     position: 'sticky',
     bottom: '0',
     zIndex: '1000',
-    display: 'flex',
     background: '#fff',
     padding: '0 20px',
     minHeight: '52px',
     border: '1px solid lightgrey',
+    display: 'grid',
+    justifyContent: 'center',
+  },
+  inner: {
+    maxWidth: '930px',
+    width: '100vw',
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
