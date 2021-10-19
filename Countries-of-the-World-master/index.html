@@ -1,1 +1,52 @@
-xcb
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="globe.ico" />
+    <title>World Countries</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <script src="https://kit.fontawesome.com/1f3c294961.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="header padding">
+        <h1>Countries of the World</h1>
+        <div class="header-darkmode">
+            <i class="fas fa-moon"></i>
+            <p>Dark mode</p>
+        </div>
+    </header>
+    <div class="attribution">
+        <p>Website Coded by Aditya Sawant</p>
+    </div>
+    <div class="content padding">
+        <div class="content-filters">
+            <div class="content-filters-input">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for country...">
+            </div>
+            <select>
+                <option value="all" selected>All</option>
+            </select>
+        </div>
+        <div class="content__items">
+            
+        </div>
+    </div>
+    <div class="itemView padding hide">
+        <button class="backbutton"><i class="fas fa-long-arrow-alt-left"></i> Back</button>
+        <div class="itemView__content">
+            
+        </div>
+    </div>
+    
+
+    <script src="src/js/main.js"></script>
+</body>
+</html>
