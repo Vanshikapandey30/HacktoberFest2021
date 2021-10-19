@@ -7,7 +7,7 @@
 body {
     margin: auto;
     padding: auto;
-    background-image: /*linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) ,*/ url("./b2.jpg");
+    background-image: /*linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)) ,*/ url("https://source.unsplash.com/daily?whether,cloud");
     background-size: cover;
     background-position: center;
     height: 100vh;

@@ -27,9 +27,9 @@ async function getValues() {
 
 // Preloader
 (() => {
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         document.querySelector(".preloader").classList.add("opacity-0");
-        setTimeout(function() {
+        setTimeout(function () {
             document.querySelector(".preloader").style.display = "none";
         }, 1000);
     });

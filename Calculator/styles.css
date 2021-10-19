@@ -3,7 +3,11 @@ body{
 }
 
 .container{
-  text-align: center;
+  position: relative;
+  top: 50px;
+  left: 550px;
+  border: 2px solid black;
+  width: 420px;
 }
 
 table{
@@ -11,16 +15,18 @@ table{
 }
 
 input{
+  margin-left: 5px;
+  width: 400px !important;
   font-size: 38px;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 button{
   font-size: 40px;
   width: 100px;
   height: 57px;
-  color: #309c5f;
-  background-color: black;
+  color: #39e6e3;
+  background-color: rgb(7, 39, 58);
 }
 
 button:hover{
