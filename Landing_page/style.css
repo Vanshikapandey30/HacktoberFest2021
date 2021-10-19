@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: #000;
+}
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  height: 100vh;
+}
+.main-img {
+  object-fit: cover;
+}
+
+input {
+  background: rgba(255, 255, 255, 0.35);
+  width: 250px;
+  padding: 1em;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+input:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+input[type="email"]:focus {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+::placeholder {
+  color: #fff;
+}
+.arrow {
+  position: relative;
+  top: 10px;
+  left: -40px;
+  background: none;
+}
+.content {
+  color: white;
+  margin-top: 40%;
+  margin-left: 20%;
+  justify-content: flex-start;
+}
+h3 {
+  font-family: verdana;
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+  font-family: "Open Sans", sans-serif;
+  color: #d81822;
+}
+p {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
