@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d9effd57;
+}
+
+.wave__container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Festive", cursive;
+  font-size: 3rem;
+}
+
+.heading2 {
+  font-family: "Festive", cursive;
+  font-size: 3rem;
+}
+
+.container {
+  margin-top: -6rem;
+}
+
+.prim a {
+  text-decoration: none;
+}
+
+.prim:hover.prim a,
+.prim a:hover {
+  color: #fff;
+}
