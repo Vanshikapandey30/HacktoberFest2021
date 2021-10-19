@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Weather Web App</title>
+    <title>Weather Web App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&display=swap" rel="stylesheet">
-  </head>
+</head>
 
-  <body>
+<body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloader Ends -->
     <div class="whole">
-    <div class="heading">Current Weather</div>
-    <section id="search" class="box-1 d-flex">
-        <input  id="search-bar" class="form-control me-2" type="search" placeholder="Search for the city..." >
-        <button class="btn btn-outline-info" id="search-btn" type="submit">Search</button>
-    </section>
+        <div class="heading">Current Weather</div>
+        <section id="search" class="box-1 d-flex">
+            <input id="search-bar" class="form-control me-2" type="search" placeholder="Search for the city...">
+            <button class="btn btn-outline-info" id="search-btn" type="submit">Search</button>
+        </section>
+        <section class="box-2">
+            <div id="city">City</div>
+            <div id="description">Weather Description</div>
+            <div class="container-1">
+                <div class="row">
+                    <div class="col">Temperature</div>
+                    <div class="col">Humidity</div>
+                    <div class="col">Pressure</div>
+                </div>
+            </div>
+            <div class="container-2">
+                <div class="row">
+                    <div id="temp" class="col">°C</div>
+                    <div id="hum" class="col">%</div>
+                    <div id="pres" class="col">mPA</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
 
-    <section class="box-2">
-      <div id="city">City</div>
-      <div id="description">Weather Description</div>
-        <div class="container-1">
-          <div class="row">
-          <div class="col">Temperature</div>
-          <div class="col">Humidity</div>
-          <div class="col">Pressure</div>
-          </div>
-        </div>
-        <div class="container-2">
-          <div class="row">
-          <div id="temp" class="col">°C</div>
-          <div id="hum" class="col">%</div>
-          <div id="pres" class="col">mPA</div>
-          </div>
-        </div>
-
-  </section>
-</div>
-
-    <script  src="index.js"></script>
-  </body>
 </html>

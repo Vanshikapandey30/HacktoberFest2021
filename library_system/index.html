@@ -5,38 +5,88 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <title>Welcome to Library System</title>
+    <style>
+
+        /* Preloader */
+
+        .preloader {
+            background-color: #222;
+            opacity: 0.9;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 150;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+            -ms-flex-pack: center;
+            -ms-flex-align: center;
+        }
+
+        .preloader.opacity-0 {
+            opacity: 0;
+        }
+
+        .preloader .loader {
+            height: 2.5rem;
+            width: 2.5rem;
+            border: 0.25rem solid #e3e3e3;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+            border-top: 0.25rem solid transparent;
+            border-bottom: 0.25rem solid transparent;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
 </head>
 
 <body>
+    <!-- Preloader Starts -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Preloader Ends -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Library System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-
                 </li>
-
             </ul>
             <form class="form-inline my-2 my-lg-0">
-
                 <a href="javascript:window.location.reload()" class="btn btn-primary">Clear All Data</a>
-
             </form>
         </div>
     </nav>
-
     <div id="message"></div>
-
-
     <div class="container my-3">
         <h1>Library System</h1>
         <hr>
@@ -90,10 +140,8 @@
                 </div>
             </div>
         </form>
-
         <div id="table">
             <h1>Your books</h1>
-
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -108,19 +156,13 @@
         </div>
     </div>
     <footer class="page-footer" style="position: absolute;bottom: 0;text-align: center;width: 100%;">
-
         <!-- Copyright -->
         <div class="footer-copyright text-center p-4">made with ❤️ by Jagrat and Kashyap
-
         </div>
         <!-- Copyright -->
-
     </footer>
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
     <script src="libraryscript.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
