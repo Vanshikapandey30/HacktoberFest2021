@@ -5,7 +5,7 @@
 
 print("Your Savings Calculator")
 hours_in_a_day= int(input("How many hours you work in a day?"))
-user_input=int(intput("How much do you earn per hour?"))
+user_input=int(input("How much do you earn per hour?"))
 daily_savings= user_input * hours_in_a_day
 print("This is your daily savings: ", daily_savings)
 
