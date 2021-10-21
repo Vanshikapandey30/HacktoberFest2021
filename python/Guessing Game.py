@@ -75,21 +75,27 @@ if choice == 2:
     time.sleep(0.4)
     guess = random.randint(s, e)
     count = 1
+    x = None
     while True:
-        try:
+        if not x:
             x = int(input("Enter the secret number:"))
+        try:
             if x < s or x > e:
+                x = None
                 raise RangeError
             
+            time.sleep(0.5)
             print(f"Guessed number is: {guess}")
             if guess == x:
                 print(f"Computer guessed your number in {count} tries")
                 break
+            
             elif guess > x:
                 time.sleep(0.4)
                 e = guess - 1
                 guess = random.randint(s, e)
                 count += 1
+            
             else:
                 time.sleep(0.4)
                 s = guess + 1
