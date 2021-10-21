@@ -24,7 +24,7 @@ if choice == 1:
                 raise Tries
             print(f"\n{tries} tries remaining")
             userInput = int(input("Entering a number other than given range will result in penalty\n"
-                               "Enter a number between 1 to 30:"))
+                                  "Enter a number between 1 to 30:"))
             print()
             
             if userInput > 30 or userInput < 1:
@@ -66,16 +66,16 @@ if choice == 1:
             print("Enter a valid input")
 
 if choice == 2:
-    while True:
-        print("Enter a range for computer to guess the number\n")
-        time.sleep(0.4)
-        s = int(input("Enter the starting number for range:"))
-        time.sleep(0.4)
-        e = int(input("Enter the ending number for range:"))
-        time.sleep(0.4)
-        guess = random.randint(s, e)
-        count = 1
     
+    print("Enter a range for computer to guess the number\n")
+    time.sleep(0.4)
+    s = int(input("Enter the starting number for range:"))
+    time.sleep(0.4)
+    e = int(input("Enter the ending number for range:"))
+    time.sleep(0.4)
+    guess = random.randint(s, e)
+    count = 1
+    while True:
         try:
             x = int(input("Enter the secret number:"))
             if x < s or x > e:
