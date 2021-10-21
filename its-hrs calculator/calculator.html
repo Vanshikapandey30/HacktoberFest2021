@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title>HRS | Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="https://kit.fontawesome.com/aba415448e.js" crossorigin="anonymous"></script>
+
+    <h1>CALCULATOR</h1>
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-4 col-md-4 col-12" id="main">
+                <form name="form1" class="calci" action="calculator.html" method="POST">
+                    <input type="text" name="answer" id="display">
+                    <br></br>
+
+
+                    <input type="button" value="C" onclick="form1.answer.value=''" class="button">
+
+
+                    <input type="button" class="button" value="⌫"
+                        onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)">
+                    <input type="button" class="button" value="00" onclick="form1.answer.value+='00'">
+
+                    <input type="button" class="operator" value="/" onclick="form1.answer.value+='/'">
+                    <br></br>
+                    <input type="button" class="button" value="7" onclick="form1.answer.value+='7'">
+                    <input type="button" class="button" value="8" onclick="form1.answer.value+='8'">
+                    <input type="button" class="button" value="9" onclick="form1.answer.value+='9'">
+
+                    <input type="button" class="operator" value="✱" onclick="form1.answer.value+='*'">
+                    <br></br>
+
+
+                    <input type="button" class="button" value="4" onclick="form1.answer.value+='4'">
+                    <input type="button" class="button" value="5" onclick="form1.answer.value+='5'">
+
+                    <input type="button" class="button" value="6" onclick="form1.answer.value+='6'">
+
+                    <input type="button" class="operator" value="−" onclick="form1.answer.value+='-'">
+                    <br></br>
+                    <input type="button" class="button" value="1" onclick="form1.answer.value+='1'">
+                    <input type="button" class="button" value="2" onclick="form1.answer.value+='2'">
+
+                    <input type="button" class="button" value="3" onclick="form1.answer.value+='3'">
+
+                    <input type="button" class="operator" value="＋" onclick="form1.answer.value+='+'">
+                    <br></br>
+
+                    <input type="button" class="button" value="0" onclick="form1.answer.value+='0'">
+
+                    <input type="button" class="button" value="." onclick="form1.answer.value+='.'">
+
+                    <input type="button" class="button" value="√" onclick="form1.answer.value+='**(1/2)'">
+
+                    <input type="button" class="operator" value="="
+                        onclick="form1.answer.value=eval(form1.answer.value)" id="zero">
+                </form>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12 float-right">
+                Made by: <a href="https://github.com/its-hrs" target="_blank">its-hrs</a>
+                <h3 style="margin-left:10px">Contact Me:</h3><br />
+                <a href="https://www.facebook.com/PotterHead9347" target="_blank"><i style="padding: 8px;"
+                        class="fab fa-facebook fa-2x" id="fb"></i></a>
+                <a href="https://www.linkedin.com/in/harsh-saxena-8a9429178/" target="_blank"><i style="padding: 8px;"
+                        class="fab fa-linkedin fa-2x" id="linkedin"></i></a>
+                <a href="https://github.com/its-hrs" target="_blank"><i style="padding: 3px;" class="fab fa-github fa-2x"
+                        id="github"></i></a>
+                <a href="https://www.instagram.com/_its_hrs/" target="_blank"><i style="padding: 3px;"
+                        class="fab fa-instagram fa-2x" id="insta"></i></a>
+                <a href="https://twitter.com/Saxenaboy_123" target="_blank"><i style="padding: 3px;" class="fab fa-twitter fa-2x"
+                        id="tweet"></i></a>
+                <a href="mailto: harsh27725@gmail.com" target="_blank"><i style="padding: 8px;" class="fas fa-paper-plane fa-2x"
+                        id="mail"></i></a>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

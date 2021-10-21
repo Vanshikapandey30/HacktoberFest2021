@@ -1,0 +1,158 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    margin: 0;
+    padding:0;
+    line-height: 0.5;
+    background:linear-gradient(to left,#ffd89b, #19547b);
+    font-family: sans-serif;
+}
+
+body i{
+    color:black;
+    padding: -1px;
+}
+
+h2{
+    text-decoration: none;
+    margin-left:80%;
+    font-size: 2em;
+}
+
+h3{
+    text-shadow: 2px 2px red;
+    color:white;
+}
+
+/* .calci{
+    width: 500px;
+    padding-top: 100px;
+    padding-bottom: 100;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transition:0.25px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+} */
+
+#zero{
+height: 58;
+width: 58;
+font-size: 2,5em;
+font-family: sans-serif;
+font-weight: 300;
+background-color: red;
+}
+
+#main{
+    /* width: 374px; */
+    height: 95vh;
+    background-color: white;
+    /* margin-left: 36%; */
+    border-radius: 10px;
+}
+
+#display{
+    
+    border:none;
+    background:red;
+    border-radius: 8px 8px 0px 0px;
+    width: 107%;
+    font-size:2.5em;
+    font-family: sans-serif;
+    font-weight: 550;
+    height: 20vh;
+    margin-left: -3.5%;
+    background-color: red;
+    border:2px solid white(5, 218, 255, 0.726);
+    color: rgb(55, 55, 55);
+}
+.button{
+    width: 58;
+    height: 58;
+    font-size: 2em;
+    border: none;
+    background: rgb(182, 179, 179);
+    font-family: sans-serif;
+    font-weight: bold;
+    border:0;
+    border-radius: 30px;
+    margin: -10px 2px 0px 30px;
+    transition:0.25px;
+    cursor: pointer;
+    
+}
+
+h1{
+    
+    font-family: sans-serif;
+    font-size: 3em;
+    text-decoration: underline;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 15px;
+    text-shadow: 3px 3px red;
+
+}
+
+.operator{
+    width: 58;
+    height: 58;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+    border: none;
+    background: rgb(182, 179, 179);
+    font-family: sans-serif;
+    font-weight: bold;
+    border:0;
+    border-radius: 30px;
+    margin: 6.5;
+    transition:0.25px;
+    cursor:pointer;
+    
+}
+
+.button:hover{
+    background: rgb(13, 238, 189);
+}
+
+.operator:hover{
+    background: #282fee;
+}
+
+#fb:hover{
+    color: blue;
+}
+
+#linkedin:hover{
+    color: darkblue
+}
+#github:hover{
+    color: rgb(130, 130, 130);    
+}
+
+#insta:hover{
+    color: rgb(241, 43, 76);
+}
+
+#tweet:hover{
+    color:#1DA1F2;
+}
+
+#zero:hover{
+background-color:rgb(247, 29, 29);
+}
+
+#mail:hover{
+    color: BB001B;
+}
+#particles-js {
+    height: 40vh;
+  }
+  
