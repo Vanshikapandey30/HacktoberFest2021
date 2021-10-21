@@ -23,26 +23,26 @@ if choice == 1:
             if tries == 0:
                 raise Tries
             print(f"\n{tries} tries remaining")
-            userin = int(input("Entering a number other than given range will result in penalty\n"
+            userInput = int(input("Entering a number other than given range will result in penalty\n"
                                "Enter a number between 1 to 30:"))
             print()
             
-            if userin > 30 or userin < 1:
+            if userInput > 30 or userInput < 1:
                 tries -= 2
                 raise RangeError
             
-            if userin == num and tries != 0:
+            if userInput == num and tries != 0:
                 time.sleep(0.5)
                 print("Congratulations you guessed the correct number")
                 break
             
-            elif userin > num and tries != 0:
+            elif userInput > num and tries != 0:
                 time.sleep(0.8)
                 tries -= 1
                 print(f"You guessed wrong number, try something lower \n")
                 time.sleep(0.8)
             
-            elif userin < num and tries != 0:
+            elif userInput < num and tries != 0:
                 tries -= 1
                 time.sleep(0.8)
                 print(f"You guessed wrong number, try something higher \n")
@@ -66,34 +66,36 @@ if choice == 1:
             print("Enter a valid input")
 
 if choice == 2:
-    print("Enter a range for computer to guess the number\n")
-    time.sleep(0.4)
-    s = int(input("Enter the starting number for range:"))
-    time.sleep(0.4)
-    e = int(input("Enter the ending number for range:"))
-    time.sleep(0.4)
-    guess = random.randint(s, e)
-    count = 1
-    try:
-        x = int(input("Enter the secret number:"))
-        if x < s or x > e:
-            raise RangeError
-        while True:
+    while True:
+        print("Enter a range for computer to guess the number\n")
+        time.sleep(0.4)
+        s = int(input("Enter the starting number for range:"))
+        time.sleep(0.4)
+        e = int(input("Enter the ending number for range:"))
+        time.sleep(0.4)
+        guess = random.randint(s, e)
+        count = 1
+    
+        try:
+            x = int(input("Enter the secret number:"))
+            if x < s or x > e:
+                raise RangeError
+            
             print(f"Guessed number is: {guess}")
             if guess == x:
                 print(f"Computer guessed your number in {count} tries")
                 break
             elif guess > x:
                 time.sleep(0.4)
-                e = guess-1
+                e = guess - 1
                 guess = random.randint(s, e)
                 count += 1
             else:
                 time.sleep(0.4)
-                s = guess+1
+                s = guess + 1
                 guess = random.randint(s, e)
                 count += 1
-    
-    except RangeError:
-        time.sleep(0.5)
-        print("Enter a number between specified range only.")
+        
+        except RangeError:
+            time.sleep(0.5)
+            print("Enter a number between specified range only.")
