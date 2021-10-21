@@ -1,5 +1,5 @@
 
-###QR Code Generator
+### QR Code Generator
 
 Generate the qr with QRcode.js.
 QRCode.js is a javascript library for making QRCode and supports Cross-browser with HTML5 Canvas and table tag in DOM.
