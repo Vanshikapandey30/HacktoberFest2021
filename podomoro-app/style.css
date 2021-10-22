@@ -1,0 +1,61 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Taviraj:wght@200;500&display=swap');
+
+
+#pomodoro,
+#timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Roboto', sans-serif;
+}
+
+.inner-wrapper {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  background-color: crimson;
+  position: relative;
+}
+
+#timer {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+#buttons {
+  text-align: center;
+}
+
+button {
+  color: crimson;
+  font-size: 1.5em;
+  border: 1px solid crimson;
+  box-shadow: none;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+}
+
+button:enabled:hover {
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.rest .inner-wrapper,
+.rest button:enabled:hover {
+  background-color: #72be00;
+}
+
+.rest button {
+  color: #72be00;
+  border-color: #72be00;
+}
