@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    /* border: 1px solid red; */
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+a{
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    line-height: 46px;
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 24px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg,#fb0094,#00f,#0f0,#ff0,#f00,#fb0094,#00f,#0f0,#ff0,#f00);
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+}
+a::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg,#fb0094,#00f,#0f0,#ff0,#f00,#fb0094,#00f,#0f0,#ff0,#f00);
+    background-size: 500%;
+    opacity: 0;
+    filter: blur(50px);
+    transition: 0.5s;
+    animation: animate 20s linear infinite;
+}
+a:hover::before,a:hover::after{
+    opacity: 1;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    0%{
+        background-position: 0 0;
+    }
+}
+a span{
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    text-align: center;
+    background: #0c0c0c;
+    color: rgba(255,255,255,0.2);   
+    z-index: 1; 
+}
+a:hover span{
+    color: rgba(255,255,255,1);
+}
+a span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255,255,255,0.1);
+}
