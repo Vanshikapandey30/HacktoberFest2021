@@ -1,0 +1,67 @@
+body {
+    background-image: url("https://images.unsplash.com/photo-1548048026-5a1a941d93d3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGlicmFyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    color: navajowhite;
+    padding: 3px;
+    font-size: 42px;
+    margin: 30px 100px 10px 100px;
+    font-family: Constantia, sans-serif;
+}
+.flex-container{
+    display: flex;
+    padding: 3px 5px;
+    justify-content: center;
+    width: 44em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 3px;
+}
+.card{
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+    padding: 10px 10px;
+    justify-content: space-around;
+    margin: 4px;
+    display: flex;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.front, .back {
+    width: 200px;
+    height: 200px;
+    line-height: 35px;
+    padding: 10px 10px;
+    justify-content: space-around;
+    margin: 4px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-family: "Bodoni MT Black", serif;
+}
+
+.front {
+    background-image: linear-gradient(lightcyan, aliceblue);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back {
+    background-image: linear-gradient(lightskyblue, lightblue);
+    z-index: 0;
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
