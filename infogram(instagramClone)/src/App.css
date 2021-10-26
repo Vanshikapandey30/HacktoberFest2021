@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.app {
+  background: #fafafa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.appHome {
+  max-width: 970px;
+}
+
+@font-face {
+  font-family: logoFont;
+  src: url(https://db.onlinewebfonts.com/t/ef9ce5e285de48129980eeec16c8285b.woff);
+}
+
+.iconStyles {
+  padding: 0 4px;
+  color: #323232;
+}
+.iconStyles:hover {
+  color: #999;
+}
+
+.FooterIcons:hover {
+  padding: 5px;
+  color: #555;
+}
+
+/* transform: scale(1.8); */
