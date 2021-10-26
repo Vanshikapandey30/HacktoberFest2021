@@ -1,0 +1,1 @@
+created the landing ui for subscribe like newsletter subscription.
