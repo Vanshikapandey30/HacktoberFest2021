@@ -21,3 +21,8 @@ def clock():
 
 clock()
 app_window.mainloop()
+
+#Created by Sumedh Suralkar
+#Github : https://github.com/sumedhx
+#Instagram : @sumedhs_    
+#            https://www.instagram.com/sumedhs_/
