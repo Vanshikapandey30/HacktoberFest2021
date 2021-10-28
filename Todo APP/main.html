@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="app.js"></script>
+    <style>
+        body{
+            font-family: 'roboto mono';
+            background: linear-gradient(rgb(89, 127, 197),rgb(95, 150, 85));
+            height:600px;
+            overflow: hidden;
+        }
+        h1{
+            font-size: 45px;
+            text-align: center;
+            margin-top: 100px;
+            color: aliceblue;
+            
+            
+        }
+        table{
+            margin: 20px auto;
+            text-align: center;
+        }
+        .label{
+            font-size: 100px;
+            line-height: 100px;
+            margin: 5px;
+            width: 120px;
+        }
+        td>button{
+            width: 100px;
+            padding: 8px;
+            border: 1px solid #fff;
+            background-color: rgba(0, 0, 0, 0.192);
+            color: #fff;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        STOPWATCH
+    </h1>
+    <table cellpadding=5>
+        <tr>
+            <td>
+                <h1 class="label" id="hr">00</h1>
+                <p>Hours</p>
+            </td>
+            <td>
+                <h1 class="label" id="min">00</h1>
+                <p>Minutes</p>
+            </td>
+            <td>
+                <h1 class="label" id="sec">00</h1>
+                <p>Seconds</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="reset()" id="reset">Reset</button>
+            </td>
+            <td>
+                <button onclick="stop()" id="stop">Stop</button>
+            </td>
+            <td>
+                <button onclick="start()" id="start">Start</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
