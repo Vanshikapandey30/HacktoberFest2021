@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style type="text/css">
+
+  .container-1,.container-2,.container-3,.container-4{
+    width:70%;
+    margin:0 auto;
+    border:1px solid black;
+    text-align:center;
+  }
+  .flex-box,.flex-box2,.flex-box3,
+  .flex-blackjack-row1,.flex-blackjack-row2,.flex-blackjack-row3{
+    border:1px solid black;
+    display:flex;
+
+    padding:10px;
+    justify-content:space-around;
+  }
+
+
+
+.flex-blackjack-row1,.flex-blackjack-row2{
+  background-image:url("https://mk0gamesnetentcxytko.kinstacdn.com/wp-content/uploads/2018/09/blackjack_background.jpg");
+ background-position:center;
+  width:100%;
+  color:#ffffff;
+
+}
+
+
+
+.flex-blackjack-row1 div{
+  border:1px solid black;
+  padding:10px;
+   height:350px;
+   flex:1;
+   /*display:flex;*/
+   text-align:center;
+
+}
+
+.flex-blackjack-row1 img{
+  width: 20%;
+  padding:10px;
+}
+
+
+.flex-blackjack-row2 button{
+  border:1px solid black;
+  padding:10px;
+}
+
+
+.flex-blackjack-row2 div{
+  border:1px solid black;
+  padding:10px;
+}
+
+table,th,td{
+  padding:5px;
+  border:1px solid black;
+}
+
+
+
+
+
+
+  .flex-box div{
+   padding:10px;
+   border:1px solid black;
+  }
+
+
+   /*<!-- ROCK PAPER SCISSORS GAME STYLING -->*/
+  .flex-box2 img:hover{
+    box-shadow: 0px 10px 50px rgba(37,50,233,1);
+  }
+
+  .s1,.s2,.s3{
+    display:none;
+  }
+
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="container-1">
+    
+      <h1> Challange: Your Age In Days</h1>
+    
+    <div class="flex-box">
+        <div>
+          <button onclick="calcAge()" class=" btn btn-primary">Click Me</button>
+        </div>
+
+         <div>
+          <button onclick="remove()" class=" btn btn-danger">Reset</button>
+        </div>
+    </div>
+
+
+    <div class="flex-box">
+      <div id="flex-result"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="container-2">
+      <h1> Rock,Paper,Scissors </h1>
+    <div class="flex-box2" id="flex-box2">
+      <img src="https://i.dlpng.com/static/png/6703722_preview.png" height="150px" width="150px" id="rock" onclick="rpsGame(this)" >
+      <img src="https://library.kissclipart.com/20180906/vpw/kissclipart-cartoon-paper-png-clipart-paper-cartoon-clip-art-39df2b7f23b5b26c.jpg" height="150px" width="150px" id="paper" onclick="rpsGame(this)">
+      <img src="https://previews.123rf.com/images/mikailain/mikailain1809/mikailain180900232/109061230-scissors-cartoon-bw.jpg" height="150px" width="150px" onclick="rpsGame(this)"
+       id="scissor">
+      <!-- <button class="btn btn-success">Generate Cat</button> -->
+      <div id="s1" class="s1"></div>
+      <div id="s2" class="s2"></div>
+      <div id="s3" class="s3"></div>
+    </div>
+
+    <div class="flex-box-result">
+      <div id="button"></div>
+    </div>
+  </div>
+
+
+  <div class="container-3">
+    <h1>CHANGE THE COLORS </h1>
+    <div class="flex-box3">
+
+
+        
+          <form>
+            <select name="backdrop" id="background" onchange="changeColor(this)"> 
+                <option value="random">RANDOM</option>
+                <option value="blue">BLUE</option>
+                <option value="red">RED</option>
+                <option value="yellow">YELLOW</option> 
+                <option value="green">GREEN</option>  
+                <option value="reset">RESET</option> 
+
+
+            </select>
+            </form>
+         
+
+         <div>
+            <button class="btn btn-primary" id="blue">WEE</button>
+         </div>
+
+         <div>
+            <button class="btn btn-danger">YAHOO</button>
+         </div>
+
+         <div>
+            <button class="btn btn-warning">GOOGLE</button>
+         </div>
+
+
+         <div>
+            <button class="btn btn-success">WHATSAPP</button>
+         </div>
+
+    </div>
+  </div>
+
+
+<!-- BLACKJACK CHALLANGE -->
+
+<div class="container-4">
+
+<h2> BLACKJACK </h2>
+<h3><span id="blackjack-result"> Let's Play </span></h3>
+
+<div class="flex-blackjack-row1">
+
+
+  <div id="your-box">
+    <h2>You:<span id="your-result">0</span></h2>
+  </div>
+
+
+  <div id="dealer-box">
+    <h2>Dealer:<span id="dealer-result">0</span></h2>
+  </div>
+
+
+</div>
+
+
+<div class="flex-blackjack-row2">
+
+  <div>
+    <button class="btn-lg btn-primary mr-2" id="hit">HIT</button>
+    <button class="btn-lg btn-warning mr-2" id="stand">STAND</button>
+    <button class="btn-lg btn-danger" id="deal">DEAL</button>
+  </div>
+
+</div>
+
+
+
+<div class="flex-blackjack-row3">
+
+  <table>
+    <tr>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Draws</th>
+    </tr>
+
+    <tr>
+      <td><span id="wins">0</span></td>
+      <td><span id="losses">0</span></td>
+      <td><span id="draws">0</span></td>
+    </tr>
+
+  </table>
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<script>
+  
+  function calcAge(){
+     var a =  prompt("Enter your birth year");
+     var calcAge=(2021-a)*365;
+     
+     var h1 = document.createElement('h1');
+     var result = document.createTextNode(`You are ${calcAge} days old`);
+     h1.setAttribute('id','ageInDays');
+     h1.appendChild(result);
+     document.getElementById('flex-result').appendChild(h1);
+
+
+  }
+
+
+  function remove(){
+    document.getElementById('ageInDays').remove();
+  }
+
+
+
+ // document.write(`Your age in days is ${calcAge}`);
+
+// var play;
+
+
+function rpsGame(yourChoice){
+  // console.log(yourChoice);
+    
+    
+    var humanChoice,botChoice;
+    humanChoice=yourChoice.id;
+    var botChoice=choiceName(bot());
+    console.log(botChoice);
+    var winner = decideWinner(humanChoice,botChoice);
+    console.log(winner);
+
+    message=finalMessage(winner);
+    console.log(message);
+    showFinalMessage=finalFrontEnd(yourChoice.id,botChoice,message);
+   
+  
+ 
+   // play=false;
+  
+
+
+
+
+
+
+}
+
+// play=false;
+
+var resetButton = document.createElement('button');
+
+
+
+
+     resetButton.innerHTML="PLAY AGAIN";
+
+  resetButton.setAttribute('class','btn-success');
+  resetButton.style.margin="6px 10px";
+
+
+
+  
+
+
+
+  document.getElementById('button').appendChild(resetButton);
+
+
+
+   // resetButton.style.display="block";
+  
+ 
+
+
+ 
+
+  resetButton.addEventListener("click",()=>{
+
+
+      // resetButton.style.display='none';
+
+    document.getElementById('s1').style.display="none";
+    document.getElementById('s2').style.display="none";
+    document.getElementById('s3').style.display="none";
+
+
+    
+    document.getElementById("rock").style.display="block";
+  document.getElementById("paper").style.display="block";
+  document.getElementById("scissor").style.display="block"; 
+
+
+
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function bot(){
+  var random = Math.floor(Math.random()*3);
+  return random;
+}
+
+function choiceName(number){
+  return ['rock','paper','scissor'][number];
+}
+
+
+function decideWinner(human,bot){
+  var database= {
+    rock:{'scissor':1,'rock':0.5,'paper':0},
+    paper:{'rock':1,'paper':0.5,'scissor':0},
+    scissor:{'paper':1,'scissor':0.5,'rock':0}
+  };
+
+  var yourScore=database[human][bot];
+  var botScore=database[bot][human];
+
+  return[yourScore,botScore];
+
+}
+
+function finalMessage([yourScore,botScore]){
+  if(yourScore===0){
+    return {'message':'You Lost' , 'color':'red'};
+  }else if(yourScore===0.5){
+    return{'message':'You Tied','color':'yellow'};
+  }
+  else{
+    return {'message':'You Won','color':'green'}
+  }
+}
+
+
+function finalFrontEnd(human,bot,message){
+  var imagesDatabase = {
+    'rock': document.getElementById('rock').src,
+    'paper': document.getElementById('paper').src,
+    'scissor': document.getElementById('scissor').src
+  }
+
+  
+ 
+
+  //REMOVING THE IMAGES:-
+
+  document.getElementById("rock").style.display="none";
+  document.getElementById("paper").style.display="none";
+  document.getElementById("scissor").style.display="none";
+
+
+  // var humanDiv = document.createElement('div');
+  // var botDiv = document.createElement('div');
+  // var messageDiv = document.createElement('div');
+
+
+  var humanDiv = document.getElementById('s1');
+  var messageDiv = document.getElementById('s2');
+  var botDiv = document.getElementById('s3');
+
+
+  humanDiv.innerHTML="<img src = '" + imagesDatabase[human] + "' height=150px width=150px style='box-shadow:0px 10px 50px rgba(37,50,233,1)'>'" ;
+
+   messageDiv.innerHTML="<h1 style= color:" + message['color'] + "; font-size:60px; padding:30px; '>"+ message['message']+"</h1>";
+
+  botDiv.innerHTML="<img src = '" + imagesDatabase[bot] + "' height=150px width=150px style='box-shadow:0px 10px 50px rgba(243,38,24,1)'>'";
+
+
+  humanDiv.style.display='block';
+  messageDiv.style.display='block';
+  botDiv.style.display='block';
+
+
+ 
+
+ 
+
+  
+  // document.getElementById('flex-box2').appendChild(humanDiv);
+  //   document.getElementById('flex-box2').appendChild(messageDiv);
+  // document.getElementById('flex-box2').appendChild(botDiv);
+
+
+
+
+
+
+}
+
+
+var buttons = document.getElementsByTagName('button');
+
+var copyAllButtons = [];
+
+for(let i=0;i<buttons.length;i++){
+  copyAllButtons.push(buttons[i].classList[1]);
+}
+console.log(copyAllButtons);
+
+
+function changeColor(color){
+
+  if(color.value==='blue'){
+    buttonsBlue();
+  }
+  else if(color.value==='red'){
+    buttonsRed();
+  }
+  else if(color.value==='yellow'){
+    buttonsYellow();
+  }
+  else if(color.value==='green'){
+    buttonsGreen();
+  }
+  else if(color.value==='random'){
+    buttonsRandom();
+  }
+
+  else if(color.value==='reset'){
+    buttonsReset();
+  }
+
+
+
+
+}
+
+
+function buttonsBlue(){
+  for(let i=0;i<buttons.length;i++){
+    buttons[i].classList.remove(buttons[i].classList[1]);
+    buttons[i].classList.add('btn-primary');
+  }
+}
+
+
+function buttonsRed(){
+  for(let i=0;i<buttons.length;i++){
+    buttons[i].classList.remove(buttons[i].classList[1]);
+    buttons[i].classList.add('btn-danger');
+  }
+}
+
+
+function buttonsYellow(){
+  for(let i=0;i<buttons.length;i++){
+    buttons[i].classList.remove(buttons[i].classList[1]);
+    buttons[i].classList.add('btn-warning');
+  }
+}
+
+
+function buttonsGreen(){
+  for(let i=0;i<buttons.length;i++){
+    buttons[i].classList.remove(buttons[i].classList[1]);
+    buttons[i].classList.add('btn-success');
+  }
+}
+
+
+function buttonsReset(){
+  for(let i=0;i<buttons.length;i++){
+   buttons[i].classList.remove(buttons[i].classList[1]);
+   buttons[i].classList.add(copyAllButtons[i]);
+  }
+}
+
+
+function buttonsRandom(){
+
+
+var randClasses = ['btn-primary','btn-success','btn-warning',
+    'btn-danger'];
+  
+
+    for(let i =0;i<=buttons.length;i++){
+      var randNumber = Math.floor(Math.random()*4);
+      buttons[i].classList.remove(buttons[i].classList[1]);
+      buttons[i].classList.add(randClasses[randNumber]);
+    }
+
+
+
+  }
+
+
+
+
+let blackjackGame = {
+  'you': {'s1':'#your-result', 's2':'#your-box','s3':0},
+  'dealer':{'s1':'#dealer-result', 's2':'#dealer-box','s3':0},
+  'cards':['2','3','4','5','6','7','8','9','10','K','J','Q','A'],
+  'cardsMap':{'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'10':10,'K':10,'J':10,'Q':10,'A':1},
+
+  'wins':0,
+  'losses':0,
+  'draws':0,
+  'isStand':false,
+  'turnsOver':false,
+  };
+
+
+const YOU = blackjackGame['you'];
+const DEALER = blackjackGame['dealer'];
+
+const hitSound = new Audio('sounds/swish.m4a');
+const winSound = new Audio('sounds/cash.mp3');
+const lossSound = new Audio('sounds/aww.mp3');
+
+document.querySelector('#hit').addEventListener('click',hit);
+document.querySelector('#stand').addEventListener('click',dealerLogic);
+document.querySelector('#deal').addEventListener('click',deal);
+
+function hit(){
+  if(blackjackGame['isStand']===false){
+  let card = randomCard();
+  showCard(card,YOU);
+  updateScore(card,YOU);
+  // console.log(YOU['s3']);
+  showScore(YOU);
+ }
+}
+
+function randomCard(){
+   let randomIndex=Math.floor(Math.random()*13);
+   return blackjackGame['cards'][randomIndex];
+}
+
+function showCard(card,activePlayer){
+  if(activePlayer['s3']<=21){
+  let cardImage = document.createElement('img');
+  cardImage.src= `images/${card}.png`;
+  document.querySelector(activePlayer['s2']).appendChild(cardImage);
+  hitSound.play();
+  }
+}
+
+function deal(){
+ 
+ if(blackjackGame['turnsOver']===true){
+
+  blackjackGame['isStand']=false;
+  
+  let yourImages = document.querySelector('#your-box').querySelectorAll('img');
+  let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
+
+
+  for(let i=0;i<yourImages.length;i++){
+    yourImages[i].remove();
+  }
+
+  for(let i=0;i<dealerImages.length;i++){
+    dealerImages[i].remove();
+  }
+
+  YOU['s3'] = 0;
+  DEALER['s3'] = 0;
+
+  document.querySelector('#your-result').textContent=0;
+  document.querySelector('#dealer-result').textContent=0;
+
+  document.querySelector('#your-result').style.color="#ffffff";
+   document.querySelector('#dealer-result').style.color="#ffffff";
+
+   document.querySelector('#blackjack-result').textContent="Let's Play ";
+   document.querySelector('#blackjack-result').style.color="black";
+
+   blackjackGame['turnsOver']=true;
+ }
+
+}
+
+function updateScore(card,activePlayer){
+  activePlayer['s3']+=blackjackGame['cardsMap'][card];
+}
+
+
+function showScore(activePlayer){
+if(activePlayer['s3']>21){
+  document.querySelector(activePlayer['s1']).textContent='BUST!';
+  document.querySelector(activePlayer['s1']).style.color='red';
+}
+else{
+document.querySelector(activePlayer['s1']).textContent = activePlayer['s3'];}
+
+
+}
+
+// let cardAce =document.createElement('img');
+// cardAce.src='images/A.png';
+// console.log(cardAce);
+
+
+function dealerLogic(){
+  blackjackGame['isStand']=true;
+  let card = randomCard();
+  showCard(card,DEALER);
+  updateScore(card,DEALER);
+  showScore(DEALER);
+
+if(DEALER['s3']>15){
+  blackjackGame['turnsOver'] = true;
+  let winner = computeWinner();
+  showResult(winner);
+}
+
+}
+
+
+//COMPUTE WINNER
+
+
+function computeWinner(){
+  let winner;
+
+  if(YOU['s3']<=21){
+    if(YOU['s3']>DEALER['s3'] || (DEALER['s3']>21)){
+      console.log('you won');
+      blackjackGame['wins']++;
+      winner=YOU;
+    }else if(YOU['s3']<DEALER['s3']){
+        console.log('YOU LOST');
+        blackjackGame['losses']++;
+        winner=DEALER;
+    }else if(YOU['s3']===DEALER['s3']){
+        console.log('drew');
+        blackjackGame['draws']++;
+    }
+  } else if(YOU['s3']>21 && DEALER['s3']<=21){
+    console.log('you lost');
+    blackjackGame['losses']++;
+    winner=DEALER;
+    //IF BOTH BUSTS
+  } else if(YOU['s3']>21 && DEALER['s3']>21){
+    console.log('YOU DREW');
+    blackjackGame['draws']++;
+  }
+
+  console.log('winner is', winner);
+  return winner;
+}
+
+
+function showResult(winner){
+ let message,messageColor;
+
+ if(blackjackGame['turnsOver']===true){
+
+ if(winner===YOU){
+  document.querySelector('#wins').textContent = blackjackGame['wins'];
+  message="YOU WON";
+  messageColor="green";
+  winSound.play();
+
+ }else if(winner===DEALER){
+  document.querySelector('#losses').textContent = blackjackGame['losses'];
+  message="YOU LOST";
+  messageColor="red";
+  lossSound.play();
+
+ }else{
+  document.querySelector('#draws').textContent = blackjackGame['draws'];
+  message = "YOU DREW";
+  messageColor="black";
+ }
+
+ document.querySelector('#blackjack-result').textContent=message;
+ document.querySelector('#blackjack-result').style.color=messageColor;
+  }
+}
+
+</script>
