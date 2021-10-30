@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beating Heart Loader-Simple</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script>
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("loader1").style.display = "none";
+			document.getElementById("c1").style.display = "none";
+			document.getElementById("page-body").style.display = "block";
+		}
+		window.onload = setTimeout(showPage, 5000);
+	</script>
+  </head>
+  <body>
+    <div class="center">
+      <div id="loader"></div>
+      <div id="loader1"></div>
+      <div id="c1"></div>
+    </div>
+
+    <div id="page-body" class="animate-bottom">
+      <h2>Hello!</h2>
+      <p>Content and loaded page..</p>
+    </div>
+
+  </body>
+</html>
