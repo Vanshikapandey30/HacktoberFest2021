@@ -1,0 +1,78 @@
+:root{
+    --transition-time:1.5s;
+}
+/* Center the content */
+body,html{
+    margin:0;
+    padding:0;
+    background-color: #84848d;
+}
+/* Loader */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+	overflow:hidden;
+	animation: expand var(--transition-time) infinite;
+    -webkit-animation: expand var(--transition-time) infinite;
+	animation-delay:.5s;
+}
+#loader {
+	position:absolute;
+    z-index: 1;
+    width: 100px;
+    height: 150px;
+	background-color:red;
+	color:red;
+    border-radius: 50px 50px 0 0;
+	transform:rotate(45deg);
+    }
+#loader1 {
+	position:absolute;
+    z-index: 1;
+	width: 100px;
+    height: 150px;
+    background-color:red;
+	color:red;
+	margin-right:72px;
+	border-radius: 50px 50px 0 0;
+	transform:rotate(-45deg);
+	}
+@-webkit-keyframes expand {
+    from {
+        -webkit-transform: scale(1);opacity:1;
+        }
+    to { 
+        -webkit-transform: scale(3);opacity:0; 
+    }
+}
+@keyframes expand {
+    from {
+        -webkit-transform: scale(1);opacity:1;
+        }
+    to { 
+        -webkit-transform: scale(3);opacity:0; 
+    }
+}
+    
+/* Animate to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s;
+    }
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+    }
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+    }
+#page-body {
+    display: none;
+    text-align: center;
+    }
