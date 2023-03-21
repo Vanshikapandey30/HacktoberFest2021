@@ -323,3 +323,37 @@ body {
     margin-left: 0.5rem;
   }
 }
+
+h1.mainHeading{
+  font-size: 3.5rem;
+  padding: 4px 10px;
+  color: #7c7a7a;
+}
+
+div.navbar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 12px;
+}
+
+.nav-logo{
+   animation: logoRotation 4s infinite linear;
+}
+
+@keyframes logoRotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+marquee.movingText{
+  font-size: 20px;
+  color: #7c7a7a;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
